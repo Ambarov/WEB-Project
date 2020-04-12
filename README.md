@@ -1,5 +1,5 @@
 # WEB-Project
-Nikola Ambarov 171177 
+#Nikola Ambarov 171177 
 Seminarska po predmetot veb programiranje FINKI
 Veb strana na kompanija za rentanje na koli vo Makedonija
 Za startuvanje na back-end potrebno e da se run-uva RentACarApplication.java
