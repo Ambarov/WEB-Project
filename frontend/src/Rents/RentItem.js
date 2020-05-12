@@ -41,7 +41,7 @@ class RentItem extends Component {
                     <li className={`list-group-item`}>RENT ID: <strong>{this.state.rnt.rentId}</strong></li>
                     <li className={`list-group-item`}>NAME: <strong>{this.state.rnt.name}</strong></li>
                     <li className={`list-group-item`}>CAR: <strong>{this.state.rnt.car}</strong></li>
-                    <li className="list-group-item">FROM: <strong>{this.state.rnt.from}</strong></li>
+                    <li className={`list-group-item`}>FROM: <strong>{this.state.rnt.from}</strong></li>
                     <li className={`list-group-item`}>TO: <strong>{this.state.rnt.to}</strong></li>
                     <li className={`list-group-item`}>PRICE: <strong>{this.state.rnt.price}</strong> /h</li>
                 </ul>

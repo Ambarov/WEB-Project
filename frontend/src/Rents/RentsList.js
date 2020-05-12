@@ -3,8 +3,9 @@ import {Link} from "react-router-dom";
 
 const getRents = (props) => {
 
-    const deleteCty= (cty) => {
-
+    const deleteRnt= (rnt) => {
+        props.onDelete(rnt);
+        props.funkcija(rnt);
     };
 
 
@@ -19,8 +20,8 @@ const getRents = (props) => {
                                 <td scope="col">{rent.dateTo}</td>
                                 <td scope="col">{rent.from}</td>
                                 <td scope="col">{rent.to}</td>
-                                <td scope="col">{rent.price}</td>
-
+                                <td scope="col">{rent.price}$</td>
+                            
 
             </tr>
 

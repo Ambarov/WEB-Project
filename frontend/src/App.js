@@ -5,9 +5,11 @@ import {BrowserRouter as Router, Route} from 'react-router-dom'
 import Header from "./Header/header";
 import CarList from "./Car/CarsList";
 import HomeCarList from "./Car/HomeCars";
+import Login from "./LoginView/Login";
 import RentList from "./Rents/RentsList";
 import Table from "./Table/Table";
-import CitiesAdd from "./Cities/CitiesAdd"
+import TableRent from "./Table/RentTable";
+import CitiesAdd from "./Cities/CitiesAdd";
 import CityItem from "./Cities/CityItem";
 import CitiesEdit from "./Cities/CitiesEdit";
 import CitiesCompared from "./Cities/CitiesCompared";
@@ -75,6 +77,19 @@ class App extends Component {
 
                 const newCitiesList = cities;
                 return {cities: newCitiesList}
+
+            })
+        })
+    };
+deleteRent = (rentToDelete) => {
+        CarsService.deleteRent(rentToDelete.name).then((response) => {
+            this.setState((prevState) => {
+                const startIndex = prevState.rents.findIndex(i => i.rentId === rentToDelete.rentId);
+                const deletedRent = prevState.rents.splice(startIndex, 1);
+                const rents = prevState.rents;
+
+                const newRentsList = rents;
+                return {rents: newRentsList}
 
             })
         })
@@ -159,11 +174,16 @@ class App extends Component {
                     }>
                     </Route>
                      <Route path={"/rents"} exact render={() =>
-                                            <RentList onPageClick={this.loadRents} rents={this.state.rents}
+                                            <TableRent onPageClick={this.loadRents}
+                                            rents={this.loadRnts} onDelete={this.deleteRent}
                                             />
 
                                         }>
                                         </Route>
+                      <Route path={"/login"} exact render={() =>
+                                 <Login />
+                                 }>
+                       </Route>
 
                     <Route path={"/add"} exact render={() =>
                         <CitiesAdd onNewCityAdded={this.createCity}/>

@@ -1,4 +1,5 @@
 import axios from '../custom-axios/axios'
+
 import qs from 'qs'
 
 
@@ -50,7 +51,11 @@ const CarsService = {
                         ...rnt
                     }
                     const formParams = qs.stringify(data);
-                            console.log(data);
+                                 if(data.name!=null)
+                            console.log("successful");
+                            else
+                            console.log("failed");
+
                             return axios.post("/rents", data,{
                                 headers:{
                                     'Content-Type': 'application/json'
@@ -80,6 +85,9 @@ const CarsService = {
     deleteCity: (ctyID) => {
         return axios.delete(`/cities/${ctyID}`);
     },
+    deleteRent: (rntID) => {
+            return axios.delete(`/rents/${rntID}`);
+        },
     searchCarTerm: (searchTerm) => {
         return axios.get(`/cars?term=${searchTerm}`);
     }

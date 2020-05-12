@@ -13,6 +13,7 @@ class CitiesCompared extends Component {
             }
     }
 
+
     componentDidMount() {
         let cars = qs.parse(window.location.search, {ignoreQueryPrefix: true});
         let car1 = cars.car[0];

@@ -21,6 +21,10 @@ const Header = (props) => {
                             {/*<a className="nav-link">Cities</a>*/}
                             <Link className="nav-link" to={"/cities"} style={{fontSize:20}}>Cities</Link>
                         </li>
+                         <li className="nav-item ">
+                                                    {/*<a className="nav-link">Cities</a>*/}
+                                                    <Link className="nav-link" to={"/rents"} style={{fontSize:20}}>Rents</Link>
+                                                </li>
                     </ul>
                     <form className="form-inline mt-2 mt-md-0 ml-3">
                         {/*<a className="btn btn-outline-info my-2 my-sm-0" href="#">Login</a>*/}

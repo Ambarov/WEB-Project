@@ -33,7 +33,7 @@ class OfferCar extends Component {
                         {this.props.car.name}
                     </h4>
                     <div className="col-md-6" align="left" hspace="60">
-                    <Link to="/addR" className="btn btn-outline-secondary" >
+                    <Link to={'/addR?'+this.props.car.price+'?'+this.props.car.name} className="btn btn-outline-secondary" >
                                         <span className="fa fa-car"><strong>Rent the car</strong></span>
                                     </Link>
                                     </div>

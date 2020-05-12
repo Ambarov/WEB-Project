@@ -1,18 +1,22 @@
 import React from 'react'
 import {Link,useHistory} from 'react-router-dom';
 const RentsAdd = (props) => {
-
+ //console.log(window.location.href.split("?")[2].split("%20")[0] + " " + window.location.href.split("?")[2].split("%20")[1]);
     const history = useHistory();
     const historyy = useHistory();
 
     const onFormSubmitt = (e) => {
         e.preventDefault();
+        const newPrice = window.location.href.split("?")[1];
+        const newName = window.location.href.split("?")[2].split("%20")[0] + " " + window.location.href.split("?")[2].split("%20")[1];
         const newRnt = {
             name: e.target.name.value,
+            car: newName,
             dateFrom: e.target.dateFrom.value,
             dateTo: e.target.dateTo.value,
             from: e.target.from.value,
             to: e.target.to.value,
+            price: newPrice,
         };
         props.onNewRentAdded(newRnt);
         history.push("/addR");
@@ -40,7 +44,7 @@ const RentsAdd = (props) => {
                                               <div className="col-sm-6">
                                                 <input type="text" className="form-control" id="dateFrom" name="dateFrom"
                                                  placeholder="yyyy-mm-dd"
-                                                 pattern="/^(\d{4})\/(\d{1,2})\/(\d{1,2})$/"
+                                                 pattern="\d\d\d\d-?\d\d-?\d\d"
                                                  />
                                                             </div>
                                                         </div>
@@ -49,7 +53,7 @@ const RentsAdd = (props) => {
                                                    <div className="col-sm-6">
                                                      <input type="text" className="form-control" id="dateTo" name="dateTo"
                                                       placeholder="yyyy-mm-dd"
-                                                      pattern="/^(\d{4})\/(\d{1,2})\/(\d{1,2})$/"
+                                                      pattern="\d\d\d\d-?\d\d-?\d\d"
                                                       />
                                                          </div>
                                                          </div>
@@ -79,7 +83,9 @@ const RentsAdd = (props) => {
                         <button
                             type="submit"
                             className="btn btn-success text-upper"
+
                             onClick={() => {
+                                    console.log(history,historyy);
                                     historyy.goBack()
                                }}>
                             Rent
