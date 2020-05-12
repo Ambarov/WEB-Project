@@ -34,7 +34,9 @@ public class RentRepositoryImpl implements RentsRepository {
     @Override
     public void deleteRent(Rent rent) {
         List<Car> cars=carRepository.findAll();
-
+        for (Car c:cars) {
+            c.getRents().remove(rent);
+        }
         rentsRepository.delete(rent);
     }
 

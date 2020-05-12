@@ -55,8 +55,8 @@ public class DATAHOLDER {
         LocalTime t2 = LocalTime.parse("09:20");
         LocalDate l1 = LocalDate.now();
         List<Rent> rents = new LinkedList<>();
-        rents.add(new Rent(1,"nikola", "fiat", l1,l1, t1,t2,34));
-        rents.add(new Rent(2,"dimitar", "fiat", l1,l1, t1,t2,34));
+        rents.add(new Rent(1,"Nikola", "Renault Clio", l1,l1, t1,t2,12));
+        rents.add(new Rent(2,"Dimitar", "Opel Insignia", l1,l1, t1,t2,20));
 
 
         for (Rent rent : rents) {
@@ -110,10 +110,10 @@ public class DATAHOLDER {
 
         List<Car> cars = new LinkedList<>();
         cars.add(new Car("Skoda Octavia IV Combi 2019", "fast","https://www.autozeitung.de/assets/field/images/skoda-octavia-iv-combi-2019-01.jpg", city3, car1,8,rents.subList(0,1)));
-        cars.add(new Car("2018 Skoda Fabia III Combi ", "fast","https://i.ytimg.com/vi/sNA0Ori-ahY/maxresdefault.jpg", city2, car22,8,rents.subList(0,1)));
+        cars.add(new Car("Skoda Fabia III Combi 2018", "fast","https://i.ytimg.com/vi/sNA0Ori-ahY/maxresdefault.jpg", city2, car22,8,rents.subList(0,1)));
         cars.add(new Car("Skoda Citigo(facelift 2017)", "fast","https://i.ytimg.com/vi/xgF1t2FdU_M/maxresdefault.jpg", city3, car3,10,rents.subList(0,1)));
-        cars.add(new Car("Volkswagen SpaceFox 2015", "fast","https://www.venelogia.com/uploads/600spacefox2.jpg", city1, car4,7,rents.subList(0,1)));
-        cars.add(new Car("2020 Volkswagen Golf VIII", "fast","https://s1.cdn.autoevolution.com/images/models/VOLKSWAGEN_Golf-5-Doors-2019_main.jpg", cities.subList(0,2), car555,15,rents.subList(0,1)));
+        cars.add(new Car("Volkswagen SpaceFox 2015", "fast","https://motosnovas.com.br/wp-content/uploads/2015/01/spacefox-2015-pre%C3%A7o.jpg", city1, car4,7,rents.subList(0,1)));
+        cars.add(new Car("Volkswagen Golf VIII 2020", "fast","https://s1.cdn.autoevolution.com/images/models/VOLKSWAGEN_Golf-5-Doors-2019_main.jpg", cities.subList(0,2), car555,15,rents.subList(0,1)));
         cars.add(new Car("Renault Clio V TCe 2020", "fast","https://s3-eu-west-1.amazonaws.com/staticeu.izmocars.com/toolkit/commonassets/2020/20renault/20renaultclioeditiononehb5b/20renaultclioeditiononehb5b_pixGallery/640x480/renault_20clioeditiononehb5b_angularrear.jpg", cities.subList(0,2), car66,12,rents.subList(0,1)));
         cars.add(new Car("Renault Espace V 2020", "fast","https://www.autoimport72.fr/photos/1594/1594-15214-8584_g.png", cities.subList(0,2), car77,18,rents.subList(0,1)));
         cars.add(new Car("Opel Insignia Tourer 2020", "fast","https://www.renderhub.com/squir/opel-insignia-sports-tourer-2017/opel-insignia-sports-tourer-2017-01.jpg", city4, car88,20,rents.subList(0,1)));

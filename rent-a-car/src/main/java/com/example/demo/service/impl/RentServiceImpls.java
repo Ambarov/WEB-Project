@@ -30,7 +30,9 @@ public class RentServiceImpls implements RentsService {
     @Override
     public void deleteRent(Rent rent) {
         List<Car> cars=carRepository.getAllCars();
-
+        for (Car c:cars) {
+            c.getRents().remove(rent);
+        }
         rentsRepository.deleteRent(rent);
     }
 

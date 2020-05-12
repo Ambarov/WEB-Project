@@ -43,6 +43,7 @@ public class CitiesAPI {
 
     @DeleteMapping("/{id}")
     public void deleteCity(@PathVariable String id) {
+
         citiesService.deleteCityByID(id);
     }
 
